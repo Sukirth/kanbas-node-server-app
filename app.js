@@ -1,6 +1,5 @@
 // const express = require('express');
 import "dotenv/config";
-import session from "express-session";
 import express from "express";
 import cors from "cors";
 import helloRoutes from "./hello.js";
