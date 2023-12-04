@@ -93,6 +93,7 @@ const lab5 = (app) => {
 
     app.get("/a5/welcome", (req, res)=> {res.send("Assignment 5 - lab exercises")});
 
+
     app.get("/a5/assignment/completed", (req, res) => {
         res.json(assignment.completed);
       });
