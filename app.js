@@ -15,9 +15,9 @@ import lab5 from './lab5.js';
 import CourseRoutes from "./courses/routes.js";
 import ModuleRoutes from "./modules/routes.js";
 const app = express();
-// const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
-// mongoose.connect(CONNECTION_STRING);
-mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
+mongoose.connect(CONNECTION_STRING);
+// mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 // app.use(cors());
 app.use(
     cors({
