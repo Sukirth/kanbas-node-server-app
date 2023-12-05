@@ -5,7 +5,7 @@ import session from "express-session";
 //mongodb://localhost:27017/kanbas
 // "mongodb://127.0.0.1:27017/kanbas"
 //mongodb+srv://kanbas:<password>@atlascluster.kojujf1.mongodb.net/?retryWrites=true&w=majority
-// mongoose.connect(DB_CONNECTION_STRING);
+
 import UserRoutes from "./users/routes.js";
 import "dotenv/config";
 import express from "express";
@@ -16,9 +16,8 @@ import CourseRoutes from "./courses/routes.js";
 import ModuleRoutes from "./modules/routes.js";
 const app = express();
 // const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || "mongodb://127.0.0.1:27017/kanbas";
-console.log(CONNECTION_STRING);
-mongoose.connect(CONNECTION_STRING);
+// mongoose.connect(CONNECTION_STRING);
+mongoose.connect("mongodb://127.0.0.1:27017/kanbas");
 // app.use(cors());
 app.use(
     cors({
